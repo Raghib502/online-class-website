@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import fakeData from '../../fakeData/courses';
 import Courses from '../Courses/Courses';
+import Cart from '../Cart/Cart';
 
 const Shop = () => {
-    const f12 = fakeData.slice(0,12);
-    const[courses , setCourses] = useState(f12);
+    const showCourse = fakeData.slice(0,12);
+    const[courses , setCourses] = useState(showCourse);
     const[cart, setCart] = useState([]);
 
     const addCourse = (course) => {
@@ -23,8 +24,8 @@ const Shop = () => {
                 </ul>
             </div>
             <div className="cart-section col-sm-4" >
-
-                <h4>Summary : {cart.length}</h4>
+                
+                <Cart cart={cart}></Cart>
             </div>
             
         </div>
