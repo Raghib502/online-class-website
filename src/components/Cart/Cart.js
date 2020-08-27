@@ -13,6 +13,7 @@ const Cart = (props) => {
             <h4 class="font-weight-bold">Order Summary</h4>
             <p class="font-weight-bolder">Course Order: {cart.length}</p>
             <p class="font-weight-bolder">Total Price: $ {total}</p>
+            <button type="button" class="btn btn-dark">Check Out</button>
            
         </div>
     );
